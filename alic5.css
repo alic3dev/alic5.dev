@@ -1,0 +1,45 @@
+@keyframes inverse {
+  0% {
+    background: #ffffff;
+    color: #000000;
+  }
+  100% {
+    background: #000000;
+    color: #ffffff;
+  }
+}
+
+:root {
+  --color-background: #555555;
+}
+
+html,
+body {
+  background: var(--color-background);
+
+  font-family: monospace;
+  font-size: 55px;
+
+  overflow: hidden;
+}
+
+.A, .l, .i, .c, .e5 {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+
+  &:nth-child(even) {
+    background: #ffffff;
+    color: #000000;
+
+    animation: alternate 5555ms ease-in-out inverse forwards infinite;
+  }
+
+  &:nth-child(odd) {
+    background: #000000;
+    color: #ffffff;
+
+    animation: alternate-reverse 5555ms ease-in-out inverse forwards infinite;
+  }
+}
+
