@@ -1,20 +1,56 @@
+const alic5 = () => {
+  const element_canvas = document.getElementsByTagName("canvas")[0];
 
-let alic5_text = 'alic5'.repeat(5);
+  if (!element_canvas) return;
 
-function alic5() {
-  console.log(alic5_text.repeat(5).repeat(5).repeat(5).repeat(5).repeat(5));
+  const context_canvas = element_canvas.getContext("2d");
 
-  alic5_text = `${alic5_text[alic5_text.length - 1]}${alic5_text.substring(0, alic5_text.length - 1)}`;
+  if (!context_canvas) return;
 
-  window.setTimeout(alic5, 555);
+  const position = {
+    x: 5555,
+    y: 5555,
+  };
 
-  if (document.readyState === 'loading') return;
+  context_canvas.translate(element_canvas.width / 2, element_canvas.height / 2);
 
-  const element_last = document.body.lastElementChild;
+  const alic5_frame = () => {
+    context_canvas.fillStyle = "#ffffff90";
+    context_canvas.strokeStyle = "#000000";
 
-  document.body.removeChild(element_last);
+    context_canvas.fillRect(0, 0, element_canvas.width, element_canvas.height);
 
-  document.body.prepend(element_last);
+    context_canvas.beginPath();
+    context_canvas.moveTo(position.x, position.y);
+
+    position.x *= -1.0;
+    position.y *= -1.0;
+
+    context_canvas.lineTo(position.x, position.y);
+
+    context_canvas.lineTo(position.x + 1000, position.y - 100);
+    context_canvas.lineTo(position.x + 600, position.y - 460);
+    context_canvas.lineTo(position.x - 1000, position.y + 300);
+    context_canvas.lineTo(position.x + 2600, position.y - 860);
+
+    context_canvas.lineTo(position.x + 602, position.y - 100);
+    context_canvas.lineTo(position.x - 600, position.y + 460);
+    context_canvas.lineTo(position.x + 110, position.y - 300);
+    context_canvas.lineTo(position.x + 760, position.y - 200);
+
+    context_canvas.closePath();
+    context_canvas.stroke();
+
+    context_canvas.rotate(0.01);
+
+    window.requestAnimationFrame(alic5_frame);
+  };
+
+  alic5_frame();
+};
+
+if (document.readyState === "complete") {
+  alic5();
+} else {
+  document.addEventListener("DOMContentLoaded", alic5);
 }
-
-alic5();
