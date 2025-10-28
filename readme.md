@@ -1,9 +1,19 @@
-# alic5.dev
+# [alic5.dev](https://alic5.dev)
 
-[alic5.dev](https://alic5.dev)
+<img width="2032" height="1316" alt="alic5.dev" src="https://github.com/user-attachments/assets/b9c7c491-fda1-4baf-8339-8eb9ae19529c" />
 
-<img width="2032" height="1316" alt="alic5" src="https://github.com/user-attachments/assets/4537eb13-b2f6-4e62-8314-1ff56ea4178d" />
+## build
+
+```zsh
+pnpm build
+```
+
+## development
+
+```zsh
+pnpm dev
+```
 
 ## copyright|copyleft
 
-> © [copyright|copyleft]->{alic3dev:2025}:[all_rights_reserved|all_lefts_reserved]
+> © [copyleft|copyright]->{alic5dev(2024|2025)}:[all_rights_reserved|all_lefts_reserved]
