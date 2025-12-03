@@ -2,8 +2,8 @@
   --color-black: #000000;
   --color-white: #ffffff;
 
-  --color-background: --color-white;
-  --color-text: --color-black;
+  --color-background: var(--color-white);
+  --color-text: var(--color-black);
 }
 
 html,
